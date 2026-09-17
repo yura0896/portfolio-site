@@ -9,7 +9,7 @@
      title     … 作品タイトル
      category  … "animation"（動画） または "illustration"（静止画）
      year      … 制作年（数値）
-     role      … 担当（例: "第二原画" / "キャラクターデザイン"）
+     role      … 担当（例: "第二原画" / "グッズ原画"）
      client    … クライアント名。個人制作は "個人制作"
      tags      … 検索・分類用のキーワード（配列）
      thumb     … 一覧サムネイル画像のパス（推奨 1600x900 / JPEG or WebP）
@@ -41,8 +41,8 @@ window.SITE = {
   // ★ 実際に対応できるものだけ残してください。できないものを載せると後で困ります
   skills: [
     { group: "アニメーション", items: ["第二原画", "GIFアニメ", "短尺アニメーション"] },
-    { group: "イラスト",       items: ["キャラクターデザイン", "ちびキャラ", "女の子イラスト", "書籍挿絵", "グッズ原画"] },
-    { group: "ソフト",         items: ["CLIP STUDIO PAINT", "After Effects", "Photoshop"] }
+    { group: "イラスト",       items: ["ちびキャラ", "女の子イラスト", "グッズ原画", "アイコン・SNS素材"] },
+    { group: "ソフト",         items: ["CLIP STUDIO PAINT"] }
   ],
   // ★ 独立以前の所属・卒業歴があれば、下に行を足してください（新しい順に並べる）
   career: [
@@ -72,13 +72,13 @@ window.WORKS = [
     credit: "©サンプル制作委員会"
   },
   {
-    id: "sample-character",
-    title: "サンプル作品：キャラクターデザイン",
+    id: "sample-goods",
+    title: "サンプル作品：アクリルスタンド原画",
     category: "illustration",
     year: 2025,
-    role: "キャラクターデザイン / 作画",
+    role: "グッズ原画",
     client: "個人制作",
-    tags: ["キャラデザ", "三面図", "オリジナル"],
+    tags: ["グッズ", "ちびキャラ", "オリジナル"],
     thumb: "assets/img/placeholder-4x3.svg",
     loop: "",
     embed: null,
@@ -86,10 +86,10 @@ window.WORKS = [
       "assets/img/placeholder-4x3.svg",
       "assets/img/placeholder-4x3.svg"
     ],
-    summary: "オリジナル作品のキャラクター設定。三面図と表情集までを一式で制作。",
+    summary: "オリジナルキャラのアクリルスタンド用原画。ちびキャラ3種をセットで制作。",
     body: [
       "デザインの意図、モチーフ、配色の理由などを書きます。",
-      "設定画・三面図・表情集がある場合は images に並べると、実務対応力が伝わります。"
+      "グッズは仕様（サイズ・白フチの有無・入稿形式）も書いておくと、発注側が判断しやすくなります。"
     ],
     featured: true,
     credit: ""
@@ -114,18 +114,18 @@ window.WORKS = [
     credit: "©サンプルレーベル"
   },
   {
-    id: "sample-bg",
-    title: "サンプル作品：書籍挿絵",
+    id: "sample-icon",
+    title: "サンプル作品：SNSアイコン",
     category: "illustration",
     year: 2024,
-    role: "書籍挿絵",
+    role: "アイコン制作",
     client: "サンプル制作会社",
-    tags: ["挿絵", "書籍", "キャラクター"],
+    tags: ["アイコン", "SNS素材", "ちびキャラ"],
     thumb: "assets/img/placeholder-4x3.svg",
     loop: "",
     embed: null,
     images: ["assets/img/placeholder-4x3.svg"],
-    summary: "書籍本文中の挿絵を担当。登場人物の表情を中心に描き起こしました。",
+    summary: "配信者向けのSNSアイコン。表情差分3種をセットで制作しました。",
     body: ["作品の要件や、作画のアプローチを記載します。"],
     featured: false,
     credit: "©サンプル制作委員会"
