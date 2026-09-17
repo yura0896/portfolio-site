@@ -9,7 +9,7 @@
      title     … 作品タイトル
      category  … "animation"（動画） または "illustration"（静止画）
      year      … 制作年（数値）
-     role      … 担当（例: "原画 / 動画 / 撮影"）
+     role      … 担当（例: "第二原画" / "キャラクターデザイン"）
      client    … クライアント名。個人制作は "個人制作"
      tags      … 検索・分類用のキーワード（配列）
      thumb     … 一覧サムネイル画像のパス（推奨 1600x900 / JPEG or WebP）
@@ -40,7 +40,7 @@ window.SITE = {
   ],
   // ★ 実際に対応できるものだけ残してください。できないものを載せると後で困ります
   skills: [
-    { group: "アニメーション", items: ["原画", "第二原画", "動画", "レイアウト", "絵コンテ", "撮影"] },
+    { group: "アニメーション", items: ["第二原画", "GIFアニメ", "短尺アニメーション"] },
     { group: "イラスト",       items: ["キャラクターデザイン", "ちびキャラ", "女の子イラスト", "書籍挿絵", "グッズ原画"] },
     { group: "ソフト",         items: ["CLIP STUDIO PAINT", "After Effects", "Photoshop"] }
   ],
@@ -53,17 +53,17 @@ window.SITE = {
 window.WORKS = [
   {
     id: "sample-tv-op",
-    title: "サンプル作品：TVアニメ OP 原画",
+    title: "サンプル作品：TVアニメ 第二原画",
     category: "animation",
     year: 2025,
-    role: "原画 / 第二原画",
+    role: "第二原画",
     client: "サンプル制作会社",
-    tags: ["TVアニメ", "アクション", "エフェクト"],
+    tags: ["TVアニメ", "アクション", "第二原画"],
     thumb: "assets/img/placeholder-16x9.svg",
     loop: "",                                   // 例: "assets/video/sample-tv-op-loop.mp4"
     embed: { type: "youtube", id: "" },         // 例: { type:"youtube", id:"dQw4w9WgXcQ" }
     images: [],
-    summary: "1カット12秒のアクションシーンを担当。エフェクト作画までを一貫して制作しました。",
+    summary: "アクションシーン3カットの第二原画を担当。ラフ原のニュアンスを保ちつつ清書しました。",
     body: [
       "担当カットの狙いや、こだわったポイントをここに書きます。3〜5行程度が読まれやすい分量です。",
       "「どんな指示を受けて、どう解釈して、何を足したか」を書くと、発注側から見た再現性が伝わります。"
@@ -96,17 +96,17 @@ window.WORKS = [
   },
   {
     id: "sample-mv",
-    title: "サンプル作品：MV アニメーション",
+    title: "サンプル作品：短尺アニメーション",
     category: "animation",
     year: 2024,
-    role: "監督 / 作画 / 撮影",
+    role: "作画 / 短尺アニメーション",
     client: "サンプルレーベル",
-    tags: ["MV", "個人制作", "撮影処理"],
+    tags: ["短尺", "個人制作", "ループ"],
     thumb: "assets/img/placeholder-16x9.svg",
     loop: "",
     embed: { type: "vimeo", id: "" },
     images: [],
-    summary: "楽曲MVを一人で制作。コンテから撮影処理まで担当しました。",
+    summary: "SNS投稿用の15秒ループアニメーション。作画から書き出しまで個人で制作。",
     body: [
       "制作規模・尺・スケジュールを書いておくと、依頼側が発注判断をしやすくなります。"
     ],
@@ -115,17 +115,17 @@ window.WORKS = [
   },
   {
     id: "sample-bg",
-    title: "サンプル作品：背景美術",
+    title: "サンプル作品：書籍挿絵",
     category: "illustration",
     year: 2024,
-    role: "背景",
+    role: "書籍挿絵",
     client: "サンプル制作会社",
-    tags: ["背景", "美術", "レイアウト"],
+    tags: ["挿絵", "書籍", "キャラクター"],
     thumb: "assets/img/placeholder-4x3.svg",
     loop: "",
     embed: null,
     images: ["assets/img/placeholder-4x3.svg"],
-    summary: "劇中の主要な舞台となる背景美術を担当。",
+    summary: "書籍本文中の挿絵を担当。登場人物の表情を中心に描き起こしました。",
     body: ["作品の要件や、作画のアプローチを記載します。"],
     featured: false,
     credit: "©サンプル制作委員会"
