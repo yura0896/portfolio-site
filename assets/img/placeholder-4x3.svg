@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img" aria-label="placeholder">
-  <rect width="1200" height="900" fill="#fde7ee"/>
-  <g fill="#eaa9bd">
+  <rect width="1200" height="900" fill="#fbe9ec"/>
+  <g fill="#e0a3ac">
     <circle cx="502" cy="468" r="28" opacity=".55"/>
     <circle cx="698" cy="468" r="28" opacity=".55"/>
     <circle cx="548" cy="408" r="30"/>
     <circle cx="652" cy="408" r="30"/>
   </g>
-  <path d="M 556 474 q 44 40 88 0" fill="none" stroke="#eaa9bd" stroke-width="13" stroke-linecap="round"/>
-  <text x="600" y="640" fill="#eaa9bd" font-family="sans-serif" font-size="40" font-weight="bold" text-anchor="middle" letter-spacing="6">4 : 3</text>
+  <path d="M 556 474 q 44 40 88 0" fill="none" stroke="#e0a3ac" stroke-width="13" stroke-linecap="round"/>
+  <text x="600" y="640" fill="#e0a3ac" font-family="sans-serif" font-size="40" font-weight="bold" text-anchor="middle" letter-spacing="6">4 : 3</text>
 </svg>

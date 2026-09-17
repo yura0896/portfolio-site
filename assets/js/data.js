@@ -33,12 +33,10 @@ window.SITE = {
   email: "chibayuuki097@gmail.com",  // ← ★公開される連絡先。別アドレスにする場合はここを変更
   location: "Tokyo, Japan",          // ← 実際の活動拠点に変更してください
   available: true,                   // ← false にすると「現在受付停止中」表示
-  // ★ 実際に運用しているアカウントだけ残し、不要な行は削除してください
+  // ★ 他にアカウントがあれば行を足してください（pixiv / Instagram / YouTube など）。
+  //    リンク切れは印象が悪いので、運用していないものは載せないこと。
   socials: [
-    { label: "X",         url: "https://x.com/yourname" },
-    { label: "Instagram", url: "https://instagram.com/yourname" },
-    { label: "pixiv",     url: "https://pixiv.net/users/000000" },
-    { label: "YouTube",   url: "https://youtube.com/@yourname" }
+    { label: "X", url: "https://x.com/Yukishiro_Yu_Ki" }
   ],
   // ★ 実際に対応できるものだけ残してください。できないものを載せると後で困ります
   skills: [

@@ -8,23 +8,25 @@
 /* ---------- 1. カラートークン（ライト = 既定） ---------- */
 :root {
   --bg:            #fffdfb;   /* ほんのり暖かい白 */
-  --bg-sub:        #eff8fa;   /* 淡水色のセクション背景 */
+  --bg-sub:        #eef5f4;   /* 青緑を薄めたセクション背景 */
   --bg-elev:       #ffffff;
-  --fg:            #3a3742;   /* 真っ黒を避けた、やわらかい濃色 */
-  --fg-muted:      #615d6c;
-  --fg-faint:      #6f6b7f;
-  --border:        #e7eef1;
+  --fg:            #2f3a3a;   /* 線画の黒に寄せた、青緑がかった濃色 */
+  --fg-muted:      #57615f;
+  --fg-faint:      #656e6c;
+  --border:        #dfeae8;
+  --sticker:       #ffffff;   /* 白フチ。作品のステッカー表現に合わせた縁取り */
 
-  /* ★ 差し色。用途ごとに濃度を分けている。変えるときは必ずセットで変更すること。
-     淡い色をそのまま文字に使うと読めなくなるため（白地で約1.6:1）分離している。 */
-  --accent:        #8ed3e0;   /* 淡水色：ボタンの塗り、枠線 */
-  --accent-text:   #17788d;   /* 同系の濃色：リンク・見出しの文字 */
-  --accent-fg:     #0d3b44;   /* --accent の上に乗る文字 */
-  --accent-2:      #fbc9d8;   /* 差し色2：やわらかいピンク（塗り用） */
-  --accent-2-text: #8a2d4f;   /* 同系の濃色：ピンクの上に乗る文字 */
+  /* ★ 差し色。--accent は X のヘッダーから取った実際のブランドカラー。
+     用途ごとに濃度を分けている。変えるときは必ずセットで変更すること。
+     淡い色をそのまま文字に使うと読めなくなるため（白地で約1.9:1）分離している。 */
+  --accent:        #90c0c0;   /* くすんだ青緑：ボタンの塗り、枠線 */
+  --accent-text:   #367170;   /* 同系の濃色：リンク・見出しの文字 */
+  --accent-fg:     #123030;   /* --accent の上に乗る文字 */
+  --accent-2:      #f6c3ca;   /* 差し色2：頬の赤みに寄せたピンク（塗り用） */
+  --accent-2-text: #93304a;   /* 同系の濃色：ピンクの上に乗る文字 */
 
-  --shadow:      0 2px 6px rgba(23,120,141,.05), 0 10px 26px rgba(23,120,141,.07);
-  --shadow-lift: 0 6px 14px rgba(23,120,141,.10), 0 20px 40px rgba(23,120,141,.13);
+  --shadow:      0 2px 6px rgba(47,58,58,.06), 0 10px 26px rgba(47,58,58,.08);
+  --shadow-lift: 0 6px 14px rgba(47,58,58,.11), 0 20px 40px rgba(47,58,58,.15);
 
   --font-sans: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "ヒラギノ丸ゴ ProN",
                "M PLUS Rounded 1c", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
@@ -40,37 +42,39 @@
 /* ---------- 2. カラートークン（ダーク） ---------- */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg:            #1b1922;
-    --bg-sub:        #232030;
-    --bg-elev:       #282436;
-    --fg:            #f4f0f7;
-    --fg-muted:      #bdb7c9;
-    --fg-faint:      #9c96ab;
-    --border:        #383247;
-    --accent:        #7ec8d6;
-    --accent-text:   #8fd9e7;
-    --accent-fg:     #0d3b44;
-    --accent-2:      #f2a8bf;
-    --accent-2-text: #4a1526;
-    --shadow:      0 2px 6px rgba(0,0,0,.30), 0 10px 26px rgba(0,0,0,.38);
-    --shadow-lift: 0 6px 14px rgba(0,0,0,.36), 0 20px 40px rgba(0,0,0,.46);
+    --bg:            #1d2323;
+    --bg-sub:        #252d2d;
+    --bg-elev:       #2a3333;
+    --fg:            #eef4f3;
+    --fg-muted:      #b3c0be;
+    --fg-faint:      #93a09e;
+    --border:        #3a4544;
+    --sticker:       #ffffff;
+    --accent:        #7fb2b2;
+    --accent-text:   #9ed0cf;
+    --accent-fg:     #123030;
+    --accent-2:      #edaab4;
+    --accent-2-text: #4a1520;
+    --shadow:      0 2px 6px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
+    --shadow-lift: 0 6px 14px rgba(0,0,0,.38), 0 20px 40px rgba(0,0,0,.48);
   }
 }
 :root[data-theme="dark"] {
-  --bg:            #1b1922;
-  --bg-sub:        #232030;
-  --bg-elev:       #282436;
-  --fg:            #f4f0f7;
-  --fg-muted:      #bdb7c9;
-  --fg-faint:      #9c96ab;
-  --border:        #383247;
-  --accent:        #7ec8d6;
-  --accent-text:   #8fd9e7;
-  --accent-fg:     #0d3b44;
-  --accent-2:      #f2a8bf;
-  --accent-2-text: #4a1526;
-  --shadow:      0 2px 6px rgba(0,0,0,.30), 0 10px 26px rgba(0,0,0,.38);
-  --shadow-lift: 0 6px 14px rgba(0,0,0,.36), 0 20px 40px rgba(0,0,0,.46);
+  --bg:            #1d2323;
+  --bg-sub:        #252d2d;
+  --bg-elev:       #2a3333;
+  --fg:            #eef4f3;
+  --fg-muted:      #b3c0be;
+  --fg-faint:      #93a09e;
+  --border:        #3a4544;
+  --sticker:       #ffffff;
+  --accent:        #7fb2b2;
+  --accent-text:   #9ed0cf;
+  --accent-fg:     #123030;
+  --accent-2:      #edaab4;
+  --accent-2-text: #4a1520;
+  --shadow:      0 2px 6px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
+  --shadow-lift: 0 6px 14px rgba(0,0,0,.38), 0 20px 40px rgba(0,0,0,.48);
 }
 
 /* ---------- 3. ベース ---------- */
@@ -128,7 +132,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .btn:active { transform: translateY(-1px); }
 .btn--ghost {
   background: var(--bg-elev); color: var(--fg); border-color: var(--border);
-  box-shadow: 0 1px 3px rgba(23,120,141,.05);
+  box-shadow: 0 1px 3px rgba(47,58,58,.06);
 }
 .btn--ghost:hover { border-color: var(--accent); box-shadow: var(--shadow); }
 
@@ -218,7 +222,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-size: 12.5px; font-weight: 500; letter-spacing: .06em; color: var(--fg-muted);
   background: var(--bg-elev); border: 2px solid var(--border);
   border-radius: var(--radius-pill); padding: 7px 17px; margin-bottom: 22px;
-  box-shadow: 0 1px 3px rgba(23,120,141,.05);
+  box-shadow: 0 1px 3px rgba(47,58,58,.06);
 }
 .badge::before {
   content: ""; width: 8px; height: 8px; border-radius: 50%; background: #35a06f; flex: none;
@@ -247,7 +251,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .card__media {
   position: relative; overflow: hidden; border-radius: var(--radius);
   background: var(--bg-sub); aspect-ratio: 16 / 9;
-  border: 2px solid var(--border);
+  border: 5px solid var(--sticker);
   box-shadow: var(--shadow);
   transition: border-color .25s, box-shadow .25s;
 }
@@ -295,7 +299,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .player {
   position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000;
   border-radius: var(--radius); overflow: hidden;
-  border: 2px solid var(--border); box-shadow: var(--shadow);
+  border: 5px solid var(--sticker); box-shadow: var(--shadow);
 }
 .player iframe, .player video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .player--empty {
@@ -319,7 +323,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .spec dd { margin: 0; }
 
 .stills { display: grid; gap: 16px; margin-top: 30px; }
-.stills img { width: 100%; border-radius: var(--radius); border: 2px solid var(--border); box-shadow: var(--shadow); }
+.stills img { width: 100%; border-radius: var(--radius); border: 5px solid var(--sticker); box-shadow: var(--shadow); }
 
 .credit { font-size: 11.5px; color: var(--fg-faint); margin-top: 30px; }
 
@@ -338,7 +342,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* 丸いプロフィール画像。四角より柔らかく見える */
 .portrait {
   width: 100%; max-width: 280px; aspect-ratio: 1; object-fit: cover;
-  border-radius: 50%; border: 5px solid var(--bg-elev);
+  border-radius: 50%; border: 6px solid var(--sticker);
   background: var(--bg-sub); box-shadow: var(--shadow-lift);
 }
 
