@@ -22,8 +22,8 @@
   --accent:        #90c0c0;   /* くすんだ青緑：ボタンの塗り、枠線 */
   --accent-text:   #367170;   /* 同系の濃色：リンク・見出しの文字 */
   --accent-fg:     #123030;   /* --accent の上に乗る文字 */
-  --accent-2:      #f6c3ca;   /* 差し色2：頬の赤みに寄せたピンク（塗り用） */
-  --accent-2-text: #93304a;   /* 同系の濃色：ピンクの上に乗る文字 */
+  --accent-2:      #f7bf94;   /* 差し色2：温かいオレンジ（塗り用） */
+  --accent-2-text: #7e3d12;   /* 同系の濃色：オレンジの上に乗る文字 */
 
   --shadow:      0 2px 6px rgba(47,58,58,.06), 0 10px 26px rgba(47,58,58,.08);
   --shadow-lift: 0 6px 14px rgba(47,58,58,.11), 0 20px 40px rgba(47,58,58,.15);
@@ -53,8 +53,8 @@
     --accent:        #7fb2b2;
     --accent-text:   #9ed0cf;
     --accent-fg:     #123030;
-    --accent-2:      #edaab4;
-    --accent-2-text: #4a1520;
+    --accent-2:      #f0b787;
+    --accent-2-text: #3d1c05;
     --shadow:      0 2px 6px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
     --shadow-lift: 0 6px 14px rgba(0,0,0,.38), 0 20px 40px rgba(0,0,0,.48);
   }
@@ -71,8 +71,8 @@
   --accent:        #7fb2b2;
   --accent-text:   #9ed0cf;
   --accent-fg:     #123030;
-  --accent-2:      #edaab4;
-  --accent-2-text: #4a1520;
+  --accent-2:      #f0b787;
+  --accent-2-text: #3d1c05;
   --shadow:      0 2px 6px rgba(0,0,0,.32), 0 10px 26px rgba(0,0,0,.40);
   --shadow-lift: 0 6px 14px rgba(0,0,0,.38), 0 20px 40px rgba(0,0,0,.48);
 }
