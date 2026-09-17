@@ -29,7 +29,7 @@ window.SITE = {
   name: "CHIBA YUUKI",               // ← ローマ字表記。綴りの好みがあれば変更してください
   nameJa: "ちばゆうき",               // ← 日本語表記（不要なら空文字）
   role: "Animator / Illustrator",    // ← 肩書き
-  tagline: "かわいいものを、描いて、動かす。", // ← トップの一言（15〜30字目安）
+  tagline: "かわいいを描いて動かす",      // ← トップの一言（15〜30字目安）
   email: "chibayuuki097@gmail.com",  // ← ★公開される連絡先。別アドレスにする場合はここを変更
   location: "Tokyo, Japan",          // ← 実際の活動拠点に変更してください
   available: true,                   // ← false にすると「現在受付停止中」表示

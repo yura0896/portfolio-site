@@ -14,8 +14,12 @@
   --fg-muted:      #6b6862;
   --fg-faint:      #9a968e;
   --border:        #e3e0da;
-  --accent:        #b4472a;   /* ★ 差し色。本人の作風に合わせて変更する */
-  --accent-fg:     #ffffff;
+  /* ★ 差し色。--accent は「塗り・枠線」、--accent-text は「文字」に使う。
+     淡い色をそのまま文字に使うと読めなくなるため、同じ色相で濃度だけ分けている。
+     色を変えるときは必ず2つセットで変更すること。 */
+  --accent:        #8ed3e0;   /* 淡水色：ボタンの塗り、枠線 */
+  --accent-text:   #17788d;   /* 同系の濃色：リンク・見出しの文字（白地に 5.1:1） */
+  --accent-fg:     #0d3b44;   /* --accent の上に乗る文字（7.3:1） */
   --shadow:        0 1px 2px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.06);
 
   --font-sans: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
@@ -35,8 +39,9 @@
     --fg-muted: #a5a29c;
     --fg-faint: #6e6b66;
     --border:   #2c2c31;
-    --accent:   #e2734f;
-    --accent-fg:#14130f;
+    --accent:      #7ec8d6;
+    --accent-text: #8fd9e7;
+    --accent-fg:   #0d3b44;
     --shadow:   0 1px 2px rgba(0,0,0,.4), 0 8px 28px rgba(0,0,0,.5);
   }
 }
@@ -48,8 +53,9 @@
   --fg-muted: #a5a29c;
   --fg-faint: #6e6b66;
   --border:   #2c2c31;
-  --accent:   #e2734f;
-  --accent-fg:#14130f;
+  --accent:      #7ec8d6;
+  --accent-text: #8fd9e7;
+  --accent-fg:   #0d3b44;
   --shadow:   0 1px 2px rgba(0,0,0,.4), 0 8px 28px rgba(0,0,0,.5);
 }
 
@@ -75,7 +81,7 @@ a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4 { line-height: 1.35; letter-spacing: .01em; margin: 0; font-weight: 700; }
 p { margin: 0 0 1.2em; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
 
 .wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: 16px; }
 .section { padding-block: clamp(56px, 9vw, 104px); }
@@ -147,7 +153,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .hero { padding-block: clamp(56px, 11vw, 128px) clamp(44px, 8vw, 84px); }
 .hero__name { font-size: clamp(34px, 8vw, 76px); line-height: 1.05; letter-spacing: -.01em; margin: 0 0 14px; }
 .hero__name small { display: block; font-size: clamp(13px, 1.8vw, 16px); letter-spacing: .1em; color: var(--fg-muted); font-weight: 500; margin-top: 10px; }
-.hero__role { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 0 0 22px; }
+.hero__role { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-text); font-weight: 700; margin: 0 0 22px; }
 .hero__tagline { font-size: clamp(16px, 2.2vw, 20px); color: var(--fg-muted); max-width: 48ch; margin: 0 0 32px; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .badge {
@@ -193,7 +199,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .card__body { padding: 14px 2px 0; }
 .card__meta { font-size: 11px; letter-spacing: .1em; color: var(--fg-faint); margin: 0 0 5px; }
 .card__title { font-size: 16px; margin: 0 0 6px; transition: color .18s; }
-.card:hover .card__title { color: var(--accent); }
+.card:hover .card__title { color: var(--accent-text); }
 .card__summary { font-size: 13px; color: var(--fg-muted); line-height: 1.7; margin: 0; }
 
 .empty { color: var(--fg-muted); padding: 40px 0; }
@@ -201,7 +207,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- 7. 作品詳細 ---------- */
 .detail__head { padding-block: clamp(32px, 6vw, 60px) 26px; }
 .back { font-size: 12px; letter-spacing: .1em; color: var(--fg-muted); display: inline-block; margin-bottom: 20px; }
-.back:hover { color: var(--accent); }
+.back:hover { color: var(--accent-text); }
 .detail__title { font-size: clamp(26px, 4.6vw, 44px); margin: 0 0 14px; }
 .detail__tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 18px; }
 .tag { font-size: 11px; letter-spacing: .08em; color: var(--fg-muted); border: 1px solid var(--border); border-radius: 999px; padding: 3px 11px; }
@@ -225,7 +231,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .pager { display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid var(--border); padding-top: 24px; margin-top: clamp(40px, 6vw, 72px); font-size: 13px; }
 .pager a { color: var(--fg-muted); }
-.pager a:hover { color: var(--accent); }
+.pager a:hover { color: var(--accent-text); }
 
 /* ---------- 8. プロフィール / 連絡 ---------- */
 .two-col { display: grid; gap: clamp(28px, 5vw, 64px); grid-template-columns: minmax(0,1fr); align-items: start; }
@@ -245,7 +251,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border: 1px solid var(--border); border-radius: var(--radius);
   background: var(--bg-elev); padding: clamp(24px, 4vw, 40px); box-shadow: var(--shadow);
 }
-.mail { font-size: clamp(17px, 3vw, 26px); font-weight: 700; word-break: break-all; color: var(--accent); }
+.mail { font-size: clamp(17px, 3vw, 26px); font-weight: 700; word-break: break-all; color: var(--accent-text); }
 .steps { counter-reset: s; margin-top: 8px; }
 .steps li { counter-increment: s; position: relative; padding-left: 40px; margin-bottom: 18px; color: var(--fg-muted); font-size: 14px; }
 .steps li::before {
