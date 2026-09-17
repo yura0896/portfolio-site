@@ -1,0 +1,21 @@
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# 制作用の作業ファイル（サイトには不要・容量が大きい）
+*.aep
+*.aepx
+*.psd
+*.clip
+*.tvpp
+*.blend
+*.blend1
+*.prproj
+
+# 書き出し前の素材置き場（使う場合）
+/_source/
+
+# エディタ
+.vscode/
+.idea/

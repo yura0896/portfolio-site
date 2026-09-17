@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Works | YOUR NAME</title>
+<meta name="description" content="アニメーション・イラストの作品一覧。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="works">
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="index.html"><span data-site="name">YOUR NAME</span><small data-site="role">Animator / Illustrator</small></a>
+    <div class="header-tools">
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="works.html" aria-current="page">Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="icon-btn" data-action="toggle-theme" aria-label="配色を切り替える" title="配色を切り替える">◐</button>
+      <button class="icon-btn nav-toggle" data-action="toggle-nav" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">≡</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Works</p>
+      <h1 class="section-title">作品一覧</h1>
+      <p class="section-lead">カテゴリで絞り込めます。サムネイルにカーソルを合わせると、動画作品はプレビューが再生されます。</p>
+
+      <div class="filters" role="group" aria-label="カテゴリで絞り込む">
+        <button class="filter" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="animation" aria-pressed="false">Animation</button>
+        <button class="filter" data-filter="illustration" aria-pressed="false">Illustration</button>
+        <span style="align-self:center;margin-left:8px;font-size:12px;color:var(--fg-faint)" id="works-count"></span>
+      </div>
+
+      <div class="grid" id="works-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="socials" data-socials></div>
+    <p class="copyright">&copy; <span data-year>2026</span> <span data-site="name">YOUR NAME</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

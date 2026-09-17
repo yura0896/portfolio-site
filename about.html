@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | YOUR NAME</title>
+<meta name="description" content="プロフィール、対応できる工程、使用ソフト、経歴。">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="about">
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="index.html"><span data-site="name">YOUR NAME</span><small data-site="role">Animator / Illustrator</small></a>
+    <div class="header-tools">
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="works.html">Works</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="icon-btn" data-action="toggle-theme" aria-label="配色を切り替える" title="配色を切り替える">◐</button>
+      <button class="icon-btn nav-toggle" data-action="toggle-nav" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">≡</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap two-col">
+      <img class="portrait" src="assets/img/placeholder-1x1.svg" alt="プロフィール写真またはアイコン">
+      <div>
+        <p class="eyebrow">About</p>
+        <h1 class="section-title" style="margin-bottom:6px"><span data-site="name">YOUR NAME</span></h1>
+        <p style="color:var(--fg-muted);font-size:14px;letter-spacing:.06em">
+          <span data-site="role">Animator / Illustrator</span> ・ <span data-site="location">Tokyo, Japan</span>
+        </p>
+        <p style="margin-top:22px">
+          アニメーションとイラストの両方を仕事にしている、フリーランスのアニメーター／イラストレーターです。
+          2026年9月に独立しました。
+        </p>
+        <!-- 独立前の所属や経験がある場合、この下に1文だけ足すと経歴に厚みが出ます。
+             例：「それまでは制作会社で動画・第二原画を担当していました。」 -->
+        <p>
+          得意なのは、かわいいものを描くことです。
+          なかでもちびキャラと、女の子の絵をよく描いています。
+          動くものと止まっているもの、どちらにも同じ熱量で向き合いたいと思っています。
+        </p>
+        <p>
+          大事にしているのは、キャラクターが画面の中でちゃんと息をしている感じです。
+          ほんの少しの間や、ふとした重心の移動。止まった絵でも、その一瞬前と一瞬後が
+          想像できるものを描きたいと思っています。
+        </p>
+        <p>
+          短い個人制作から、スケジュールの決まった商業案件まで対応しています。
+          <!-- ▼ 対応できる規模が固まったら、ここを具体的な数字に置き換えてください -->
+          尺や点数のご相談も承りますので、まずはお気軽にお声がけください。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sub">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Skills</p>
+        <h2 class="section-title">対応できること</h2>
+      </div>
+      <div id="skills"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap two-col">
+      <div>
+        <p class="eyebrow">Career</p>
+        <h2 class="section-title">経歴</h2>
+      </div>
+      <div>
+        <ul class="timeline" id="career"></ul>
+        <p class="note" style="margin-top:28px">
+          守秘義務のある案件は、作品名を伏せて「TVアニメ／2024年／原画」のように工程と年だけを書く形でも構いません。
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="socials" data-socials></div>
+    <p class="copyright">&copy; <span data-year>2026</span> <span data-site="name">YOUR NAME</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

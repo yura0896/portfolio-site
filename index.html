@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YOUR NAME | Animator / Illustrator Portfolio</title>
+<meta name="description" content="アニメーター・イラストレーターのポートフォリオサイト。作画、キャラクターデザイン、MV制作などの実績を掲載しています。">
+<!-- OGP：公開前に URL と画像パスを実際のものへ差し替えてください -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Animator / Illustrator Portfolio">
+<meta property="og:description" content="アニメーター・イラストレーターのポートフォリオサイト。">
+<meta property="og:image" content="assets/img/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="logo" href="index.html"><span data-site="name">YOUR NAME</span><small data-site="role">Animator / Illustrator</small></a>
+    <div class="header-tools">
+      <nav class="nav" id="nav">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="works.html">Works</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="icon-btn" data-action="toggle-theme" aria-label="配色を切り替える" title="配色を切り替える">◐</button>
+      <button class="icon-btn nav-toggle" data-action="toggle-nav" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">≡</button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===== ヒーロー ===== -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="badge" data-available="true">現在お仕事を受け付けています</span>
+      <p class="hero__role" data-site="role">Animator / Illustrator</p>
+      <h1 class="hero__name"><span data-site="name">YOUR NAME</span><small data-site="nameJa"></small></h1>
+      <p class="hero__tagline" data-site="tagline">ここに本人のキャッチコピーが入ります。</p>
+      <div class="hero__actions">
+        <a class="btn" href="works.html">作品を見る</a>
+        <a class="btn btn--ghost" href="contact.html">お仕事のご依頼</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 代表作 ===== -->
+  <section class="section section--sub">
+    <div class="wrap">
+      <p class="eyebrow">Selected Works</p>
+      <h2 class="section-title">代表作</h2>
+      <p class="section-lead">アニメーションとイラストから、特に見ていただきたい作品を掲載しています。</p>
+      <div class="grid" id="featured-grid"></div>
+      <p style="margin-top:36px"><a class="btn btn--ghost" href="works.html">すべての作品を見る →</a></p>
+    </div>
+  </section>
+
+  <!-- ===== プロフィール抜粋 ===== -->
+  <section class="section">
+    <div class="wrap two-col">
+      <img class="portrait" src="assets/img/placeholder-1x1.svg" alt="プロフィール写真またはアイコン">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 class="section-title">できること</h2>
+        <p class="section-lead" style="margin-bottom:24px">
+          原画・動画といった作画工程から、キャラクターデザイン、背景、撮影処理まで対応しています。
+          短尺の個人制作から、スケジュールの決まった商業案件まで対応可能です。
+        </p>
+        <p><a class="btn btn--ghost" href="about.html">経歴・スキルの詳細 →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 依頼への導線 ===== -->
+  <section class="section section--sub">
+    <div class="wrap" style="max-width:720px">
+      <div class="contact-card" style="text-align:center">
+        <p class="eyebrow" style="margin-bottom:6px">Contact</p>
+        <h2 class="section-title" style="margin-bottom:14px">お仕事のご依頼</h2>
+        <p style="color:var(--fg-muted);font-size:14px">
+          作画・イラスト・アニメーション制作のご依頼を承っています。<br>
+          内容・尺・希望納期をお知らせいただければ、可否とお見積りをご返信します。
+        </p>
+        <p style="margin:22px 0 0"><a class="mail" href="mailto:your@example.com" data-site="email">your@example.com</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div class="socials" data-socials></div>
+    <p class="copyright">&copy; <span data-year>2026</span> <span data-site="name">YOUR NAME</span>. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
