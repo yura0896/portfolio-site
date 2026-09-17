@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="placeholder"><rect width="1600" height="900" fill="#d8d5d0"/><g fill="none" stroke="#b3afa8" stroke-width="3"><path d="M0 0 L1600 900 M1600 0 L0 900"/><rect x="1.5" y="1.5" width="1597" height="897"/></g><text x="50%" y="50%" fill="#7d7973" font-family="sans-serif" font-size="64" text-anchor="middle" dominant-baseline="middle" letter-spacing="4">16x9 IMAGE</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="placeholder">
+  <rect width="1600" height="900" fill="#d8eff3"/>
+  <g fill="#8dc6d2">
+    <circle cx="690" cy="468" r="30" opacity=".5"/>
+    <circle cx="910" cy="468" r="30" opacity=".5"/>
+    <circle cx="742" cy="408" r="30"/>
+    <circle cx="858" cy="408" r="30"/>
+  </g>
+  <path d="M 752 474 q 48 42 96 0" fill="none" stroke="#8dc6d2" stroke-width="13" stroke-linecap="round"/>
+  <text x="800" y="640" fill="#8dc6d2" font-family="sans-serif" font-size="40" font-weight="bold" text-anchor="middle" letter-spacing="6">16 : 9</text>
+</svg>
