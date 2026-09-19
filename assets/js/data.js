@@ -60,6 +60,23 @@ window.SITE = {
 
 window.WORKS = [
   {
+    id: "2026-voltaction-mv",
+    title: "VOLTACTION ”マジ！Magic！PEACH！” Official MV",
+    category: "animation",
+    year: 2026,
+    role: "参加",
+    client: "SATELLITE8 inc.",
+    tags: ["MV"],
+    thumb: "assets/img/2026-voltaction-mv.jpg",
+    loop: "",
+    embed: { type: "youtube", id: "q-WSr-39PAA" },
+    images: [],
+    summary: "",
+    body: [],
+    featured: true,
+    credit: ""
+  },
+  {
     id: "2026-ochamura-oyasumi",
     title: "おちゃむら スタンプアニメーション",
     category: "animation",
