@@ -36,15 +36,15 @@ portfolio-site/
 
 ```js
 {
-  id: "2026-action-cut",              // 半角英数とハイフン。他と重複させない
-  title: "TVアニメ『◯◯』OP 原画",
+  id: "2026-tv-second-key",           // 半角英数とハイフン。他と重複させない
+  title: "TVアニメ『◯◯』第二原画",
   category: "animation",              // "animation" または "illustration"
   year: 2026,
-  role: "原画 / エフェクト作画",
+  role: "第二原画",
   client: "株式会社◯◯",
   tags: ["TVアニメ", "アクション"],
-  thumb: "assets/img/2026-action-cut.jpg",
-  loop:  "assets/video/2026-action-cut-loop.mp4",   // 無ければ ""
+  thumb: "assets/img/2026-tv-second-key.jpg",
+  loop:  "assets/video/2026-tv-second-key-loop.mp4", // 無ければ ""
   embed: { type: "youtube", id: "動画ID" },          // 無ければ null
   images: [],
   summary: "一覧に出る1〜2行の紹介文。",
