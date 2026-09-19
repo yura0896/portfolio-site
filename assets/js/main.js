@@ -77,6 +77,20 @@
       }).join("");
     });
 
+    /* もう1つの窓口へのリンク（SITE.extraLink）。未設定ならブロックごと消す */
+    $$("[data-extra-link]").forEach(function (el) {
+      var link = SITE.extraLink;
+      if (!link || !link.url) {
+        if (el.parentNode) el.parentNode.removeChild(el);
+        return;
+      }
+      el.innerHTML =
+        '<p class="eyebrow">' + esc(link.label || "Links") + "</p>" +
+        (link.note ? '<p style="margin:10px 0 16px;font-size:14px;color:var(--fg-muted)">' + esc(link.note) + "</p>" : "") +
+        '<a class="btn btn--ghost" href="' + esc(link.url) + '" target="_blank" rel="noopener noreferrer">' +
+        esc(link.linkText || "ページを見る →") + "</a>";
+    });
+
     $$("[data-year]").forEach(function (el) { el.textContent = String(new Date().getFullYear()); });
 
     $$("[data-available]").forEach(function (el) {

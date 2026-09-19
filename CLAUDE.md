@@ -34,30 +34,37 @@
 
 ### このPCの環境で注意すること
 
-- **Node.js も Python も入っていない**（`python` は Windows ストアの空スタブ）。ローカルサーバーは立てられない
+- **Node.js も Python も入っていない**（`python` は Windows ストアの空スタブ）。
+  このPC上ではローカルサーバーを立てられず、ビルドも走らせられない
+- `gh`（GitHub CLI）も入っていない。GitHub のリポジトリ作成はブラウザで本人が行う
 - ブラウザペインで `file://` の HTML を開くと静的スナップショット（data: URL）になり、
   **相対パスの CSS / JS / 画像が読み込まれない**。そのままでは表示確認にならない
-- 表示確認は、CSS・JS・画像を1ファイルにインライン化した検証用ビルドを
-  スクラッチパッドに作って開く（下のスクリプト）。data: URL では `history.replaceState` が
-  例外になるが、これは検証環境の都合で本番では起きない（`main.js` 側でも try/catch 済み）
-- `gh`（GitHub CLI）は入っていない。GitHub のリポジトリ作成はブラウザで本人が行う
+
+### 表示確認は Claude 側のクラウド環境でやるのが早い（2026-09-19 に確立）
+
+Claude のクラウド環境には Node と Chromium（Playwright）が入っている。
+`device_stage_files` でこのフォルダ一式をクラウドへ吸い上げ、そこで静的サーバーを立てて
+Chromium で開けば、**本番と同じ相対パスのまま**表示確認できる。
+インライン化ビルドはもう要らない。
 
 ```bash
-# 検証用ビルド（PAGE を index.html / works.html / about.html などに変えて使う）
-SRC=/c/Users/chiba/portfolio-site; OUT="<スクラッチパッドのパス>"; PAGE=index.html
-b169=$(base64 -w0 "$SRC/assets/img/placeholder-16x9.svg"); b43=$(base64 -w0 "$SRC/assets/img/placeholder-4x3.svg"); b11=$(base64 -w0 "$SRC/assets/img/placeholder-1x1.svg")
-{ echo "<style>"; cat "$SRC/assets/css/style.css"; echo "</style>"; } > "$OUT/_css.html"
-{ echo "<script>"; sed -e "s|assets/img/placeholder-16x9.svg|data:image/svg+xml;base64,$b169|g" -e "s|assets/img/placeholder-4x3.svg|data:image/svg+xml;base64,$b43|g" "$SRC/assets/js/data.js"; echo "</script>"; } > "$OUT/_data.html"
-{ echo "<script>"; cat "$SRC/assets/js/main.js"; echo "</script>"; } > "$OUT/_main.html"
-sed -e "s|assets/img/placeholder-1x1.svg|data:image/svg+xml;base64,$b11|g" "$SRC/$PAGE" > "$OUT/tmp.html"
-sed -i -e '/<link rel="stylesheet" href="assets\/css\/style.css">/{ r '"$OUT"'/_css.html' -e 'd }' "$OUT/tmp.html"
-sed -i -e '/<script src="assets\/js\/data.js"><\/script>/{ r '"$OUT"'/_data.html' -e 'd }' "$OUT/tmp.html"
-sed -i -e '/<script src="assets\/js\/main.js"><\/script>/{ r '"$OUT"'/_main.html' -e 'd }' "$OUT/tmp.html"
-mv "$OUT/tmp.html" "$OUT/preview-$PAGE"
+# クラウド側。事前に HTML / css / js / img を全部 stage しておくこと
+cd <staged>/portfolio-site && (python3 -m http.server 8731 >/dev/null 2>&1 &)
+# あとは Playwright で http://localhost:8731/contact.html などを開いて screenshot
 ```
 
-実画像（jpg / png / mp4）を足した後は、同じ要領で base64 に置き換えるか、
-Artifact として公開して確認する。
+- Google Fonts はクラウドのプロキシに塞がれて読めない。`ERR_TUNNEL_CONNECTION_FAILED` は
+  検証環境の都合で、本番では出ない。それ以外のエラー・404 は実際の不具合として扱う
+- 画像・動画を足した後もこの方法でそのまま確認できる
+
+### ブラウザ側セッションの制約（Claude Code CLI では発生しない）
+
+- ブラウザ側の Claude（claude.ai のプロジェクト）はこのPC上でコマンドを実行する手段
+  （device_bash）が無く、git を動かせない。ファイルの読み書きは `device_stage_files` /
+  `device_commit_files` で行うため、**変更は作業ツリーに置かれるだけでコミットされない**
+- **Claude Code（この CLI）ならこのPC上で直接 git を実行できる**。ブラウザ側からの
+  引き継ぎ（画面のスクリーンショット等）を受けたら、変更内容を確認したうえで
+  Claude Code 側でまとめてコミットする
 
 ---
 
@@ -142,15 +149,31 @@ Artifact として公開して確認する。
 
 ---
 
-## 6. 未回答の質問（本人に確認待ち）
+## 6. 本人に確認した回答（2026-09-19）
 
-1. **肩書きの順番**：いまは「Animator / Illustrator」。対応工程はイラスト側の比重が大きいので、
-   イラストの仕事を主に受けたいなら「Illustrator / Animator」への入れ替えを提案している。
-   変える場合は肩書き・title タグ・OGP・meta description をまとめて直す
-2. **ソフト欄**：CLIP STUDIO PAINT の1項目だけ。そのまま出す／欄ごと削除／
-   「PNG / CLIP / mp4 納品可」などの納品形式を併記、の3案を出している
-3. **有償依頼の導線**：本人は tsunagu.cloud でワンコイン出品をしている（X の固定ポスト）。
-   サイトの Contact からそちらへ誘導するかは未検討
+以前の未回答リストは本人に確認済み。**下記は本人の判断なので、勝手に戻さないこと。**
+
+1. **肩書きの順番** → 「Animator / Illustrator」の**まま**で確定。
+   入れ替えの提案は本人が見たうえで現状維持を選んだ。もう提案しない
+2. **ソフト欄** → CLIP STUDIO PAINT の**1項目のまま**で確定。
+   納品形式の併記も欄の削除もしない
+3. **有償依頼の導線** → tsunagu.cloud の**プロフィールへの案内のみ**。
+   URL は本人から：https://tsunagu.cloud/users/chiba_yuuki97
+   - **ワンコイン出品は終了している**（本人談）。「ワンコイン」「少額」「◯円から」等の
+     金額に踏み込んだ書き方はしない。プロフィールを見てもらう案内にとどめる
+   - `data.js` の `SITE.extraLink` に文言と URL を置き、`contact.html` の
+     `data-extra-link` に流し込む
+   - 掲載をやめるときは `SITE.extraLink` を `null` にすればブロックごと消える
+     （`main.js` 側で親要素ごと削除している）
+   - **表示名は「つなぐ」に統一**（本人の指示、2026-09-19）。見出し・本文・ボタンの
+     3か所（`extraLink.label` / `note` / `linkText`）は「つなぐ」と書き、
+     `tsunagu.cloud` というドメイン表記はリンク先の `url` だけに残す
+4. **活動拠点** → 「Japan」のみ。都道府県は出さない（本人の指示）
+
+### まだ答えをもらえていないもの
+
+- 仕事用に別のメールアドレスを使うか。いまは `chibayuuki097@gmail.com` が公開される。
+  一度伝えてあるが明確な返事はまだない
 
 ## 7. 次にやること
 
@@ -169,6 +192,13 @@ Artifact として公開して確認する。
 - 署名はリポジトリ内だけに設定済み：`ちばゆうき <chibayuuki097@gmail.com>`（global 設定は触らない）
 - コミットメッセージは日本語。1行目に要約、本文に「なぜ変えたか」を書く
 - 変更のたびにコミットする。作業ツリーをクリーンな状態で終える
+
+### 2026-09-19 の作業はこのセッション（Claude Code CLI）でコミット済み
+
+前のセッション（ブラウザ側、git を動かせなかった）が作業ツリーに置いた変更と、
+そのあと本人が別チャットで指示した「tsunagu.cloud → つなぐ」表示統一を、
+このセッションでまとめてコミットした。あわせて空の引き継ぎメモ
+（`CLAUDE.md を読んで、続きから進めて.txt`）を削除した。
 
 ## 9. 関連リソース（前のアカウントが所有）
 

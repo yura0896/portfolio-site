@@ -31,13 +31,21 @@ window.SITE = {
   role: "Animator / Illustrator",    // ← 肩書き
   tagline: "かわいいを描いて動かす",      // ← トップの一言（15〜30字目安）
   email: "chibayuuki097@gmail.com",  // ← ★公開される連絡先。別アドレスにする場合はここを変更
-  location: "Tokyo, Japan",          // ← 実際の活動拠点に変更してください
+  location: "Japan",                 // ← 本人の指示で国名のみ。都道府県は出さない
   available: true,                   // ← false にすると「現在受付停止中」表示
   // ★ 他にアカウントがあれば行を足してください（pixiv / Instagram / YouTube など）。
   //    リンク切れは印象が悪いので、運用していないものは載せないこと。
   socials: [
     { label: "X", url: "https://x.com/Yukishiro_Yu_Ki" }
   ],
+  // ★ Contact ページ下部に出る、もう1つの窓口へのリンク。
+  //    やめるときは extraLink: null にすれば、そのブロックごと消えます。
+  extraLink: {
+    label: "つなぐ",
+    note: "つなぐにもプロフィールを置いています。あわせてご覧ください。",
+    linkText: "つなぐのプロフィールを見る →",
+    url: "https://tsunagu.cloud/users/chiba_yuuki97"
+  },
   // ★ 実際に対応できるものだけ残してください。できないものを載せると後で困ります
   skills: [
     { group: "アニメーション", items: ["第二原画", "GIFアニメ", "短尺アニメーション"] },
