@@ -9,7 +9,7 @@
 
 ```
 portfolio-site/
-├─ index.html          トップ（ヒーロー / 代表作 / About抜粋 / 依頼導線）
+├─ index.html          トップ（ヒーロー / 見てほしい作品 / About抜粋 / 依頼導線）
 ├─ works.html          作品一覧（All / Animation / Illustration で絞り込み）
 ├─ work.html           作品詳細（?id=作品ID で内容が切り替わる共通テンプレート）
 ├─ about.html          プロフィール / スキル / 経歴
@@ -48,7 +48,7 @@ portfolio-site/
   images: [],
   summary: "一覧に出る1〜2行の紹介文。",
   body: ["詳細ページの本文。段落ごとに配列で区切る。"],
-  featured: true,                     // トップの「代表作」に載せるなら true
+  featured: true,                     // トップの「見てほしい作品」に載せるなら true
   credit: "©◯◯製作委員会"
 },
 ```
