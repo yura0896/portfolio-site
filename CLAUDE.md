@@ -186,11 +186,22 @@ cd <staged>/portfolio-site && (python3 -m http.server 8731 >/dev/null 2>&1 &)
    Zen Maru Gothic で新規作成（`assets/img/og-image.jpg`）
 5. ~~GitHub にリポジトリ作成・push~~ → 完了（2026-09-19、以降も随時push済み）。
    https://github.com/yura0896/portfolio-site
-6. ~~Cloudflare Pages との接続~~ → 完了（2026-09-20）。本人のアカウントで接続してもらい、
-   公開URLは **https://portfolio-site-a9y.pages.dev** 。
+6. ~~Cloudflare Pages との接続~~ → 完了（2026-09-20）。公開URLは **https://chiba-yuuki.pages.dev** 。
    `index.html` の `og:url` / `og:image` をこのURLの絶対パスに更新済み。
    **独自ドメインを取得した場合は、この2箇所を差し替えること**
-7. 公開前チェックリスト（README.md の 7 章）を消化する
+7. ~~公開前チェックリスト（README.md の 7 章）~~ → 主要項目は完了（2026-09-20）。
+   タイトル/description・OGP・メールリンク・スマホ表示を確認済み。
+   守秘義務のある案件が載っていないかは、日を改めて本人に見直してもらうこと
+
+### Cloudflare Pages のプロジェクト名 / pages.dev サブドメインについて（2026-09-20）
+
+- 新しいCloudflareの管理画面では、プロジェクトの「Rename」はダッシュボード上の
+  表示名を変えるだけで、**pages.dev のサブドメインには反映されない**
+  （ダイアログにも "This will not impact any hostnames or deployments" と明記されている）
+- pages.dev のサブドメインを変えたい場合は、**プロジェクトを削除して、
+  希望のプロジェクト名で作り直す**しかない（GitHub リポジトリ自体は消えないので安全）
+- 最初は `portfolio-site` という名前で作ったため `portfolio-site-a9y.pages.dev` になっていたが、
+  本人の希望で削除・再作成し、`chiba-yuuki` → `chiba-yuuki.pages.dev` にした
 
 ### 参加作品（自分がメインで手掛けていない作品）の載せ方（2026-09-20）
 
