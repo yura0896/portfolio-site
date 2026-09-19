@@ -15,6 +15,7 @@ portfolio-site/
 ├─ about.html          プロフィール / スキル / 経歴
 ├─ contact.html        依頼方法 / 依頼の流れ
 ├─ README.md           このファイル
+├─ CLAUDE.md           Claude 向けの引き継ぎメモ（決めたことと、その理由）
 └─ assets/
    ├─ css/style.css    全体のスタイル（配色は先頭の :root 変数で一括変更）
    ├─ js/data.js       ★ 作品データとサイト情報。更新するのは基本ここだけ
