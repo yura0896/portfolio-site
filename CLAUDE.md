@@ -183,12 +183,13 @@ cd <staged>/portfolio-site && (python3 -m http.server 8731 >/dev/null 2>&1 &)
    イラストはJPEG圧縮（1600px長辺・85品質基準）、GIFはそのまま `assets/img/` に配置した
 3. ~~`data.js` の `WORKS` を実データに置き換え~~ → 完了（2026-09-20）。サンプル作品は削除済み
 4. ~~OGP 画像（1200×630）を用意~~ → 完了（2026-09-20）。ヒーローと同じ配色・
-   Zen Maru Gothic で新規作成（`assets/img/og-image.jpg`）。
-   **`og:image` はまだ相対パスのまま。Cloudflare Pages / 独自ドメインが決まったら絶対URLに差し替える**
+   Zen Maru Gothic で新規作成（`assets/img/og-image.jpg`）
 5. ~~GitHub にリポジトリ作成・push~~ → 完了（2026-09-19、以降も随時push済み）。
    https://github.com/yura0896/portfolio-site
-6. Cloudflare Pages との接続（README.md の 6-3 章）。本人のアカウントでの操作が必要なため、
-   ログイン・接続は本人が行う。設定内容の確認とURL決定後の後処理（og:image等）はこちらで対応する
+6. ~~Cloudflare Pages との接続~~ → 完了（2026-09-20）。本人のアカウントで接続してもらい、
+   公開URLは **https://portfolio-site-a9y.pages.dev** 。
+   `index.html` の `og:url` / `og:image` をこのURLの絶対パスに更新済み。
+   **独自ドメインを取得した場合は、この2箇所を差し替えること**
 7. 公開前チェックリスト（README.md の 7 章）を消化する
 
 ### 参加作品（自分がメインで手掛けていない作品）の載せ方（2026-09-20）
