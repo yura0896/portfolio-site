@@ -116,7 +116,7 @@
         '<div class="card__body">' +
           '<p class="card__meta">' + esc(w.year) + (w.client ? " ・ " + esc(w.client) : "") + "</p>" +
           '<h3 class="card__title">' + esc(w.title) + "</h3>" +
-          '<p class="card__summary">' + esc(w.summary) + "</p>" +
+          (w.summary ? '<p class="card__summary">' + esc(w.summary) + "</p>" : "") +
         "</div>" +
       "</a>";
   }
@@ -224,7 +224,8 @@
     var prev = WORKS[idx - 1];
     var next = WORKS[idx + 1];
 
-    var main = w.category === "animation"
+    // GIFアニメ単体の作品など、埋め込み動画が無い場合はサムネイル（GIF）をそのまま大きく表示する
+    var main = (w.category === "animation" && w.embed)
       ? playerHTML(w)
       : '<img src="' + esc(w.thumb) + '" alt="' + esc(w.title) + '" style="width:100%;border:1px solid var(--border);border-radius:var(--radius)">';
 
@@ -242,7 +243,7 @@
         '<a class="back" href="works.html">← 作品一覧</a>' +
         '<p class="eyebrow">' + esc(CATEGORY_LABEL[w.category] || w.category) + " ・ " + esc(w.year) + "</p>" +
         '<h1 class="detail__title">' + esc(w.title) + "</h1>" +
-        '<p class="section-lead" style="margin-bottom:0">' + esc(w.summary) + "</p>" +
+        (w.summary ? '<p class="section-lead" style="margin-bottom:0">' + esc(w.summary) + "</p>" : "") +
         ((w.tags && w.tags.length)
           ? '<div class="detail__tags">' + w.tags.map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") + "</div>"
           : "") +

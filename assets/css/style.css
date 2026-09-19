@@ -261,6 +261,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   width: 100%; height: 100%; object-fit: cover;
   transition: transform .55s cubic-bezier(.2,.7,.3,1);
 }
+/* イラストは縦長の全身絵が多く、中央切り抜きだと顔が切れるため上寄せにする */
+.card[data-category="illustration"] .card__media img { object-position: top; }
 .card__media video { position: absolute; inset: 0; opacity: 0; transition: opacity .3s; }
 .card:hover .card__media img, .card:focus-visible .card__media img { transform: scale(1.05); }
 .card:hover .card__media video[data-ready="true"] { opacity: 1; }
