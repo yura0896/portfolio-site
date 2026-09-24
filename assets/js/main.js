@@ -91,6 +91,30 @@
         esc(link.linkText || "ページを見る →") + "</a>";
     });
 
+    /* 今後3か月の受付状況（SITE.availability）。未設定ならブロックごと消す */
+    var AVAIL = {
+      open:    { mark: "○", text: "受付可能" },
+      limited: { mark: "△", text: "要相談" },
+      closed:  { mark: "×", text: "受付不可" }
+    };
+    $$("[data-availability]").forEach(function (el) {
+      var a = SITE.availability;
+      if (!a || !a.months || !a.months.length) {
+        if (el.parentNode) el.parentNode.removeChild(el);
+        return;
+      }
+      el.innerHTML =
+        '<p class="availability__title">今後の依頼受付状況' +
+        (a.updated ? "<small>" + esc(a.updated) + " 更新</small>" : "") + "</p>" +
+        '<ul class="availability__list">' + a.months.map(function (m) {
+          var s = AVAIL[m.status] || AVAIL.closed;
+          return '<li class="availability__item" data-status="' + esc(m.status) + '">' +
+            '<span class="availability__month">' + esc(m.label) + "</span>" +
+            '<span class="availability__mark" aria-hidden="true">' + s.mark + "</span>" +
+            '<span class="availability__text">' + s.text + "</span></li>";
+        }).join("") + "</ul>";
+    });
+
     $$("[data-year]").forEach(function (el) { el.textContent = String(new Date().getFullYear()); });
 
     $$("[data-available]").forEach(function (el) {

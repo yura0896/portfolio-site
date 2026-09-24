@@ -38,6 +38,17 @@ window.SITE = {
   socials: [
     { label: "X", url: "https://x.com/Yukishiro_Yu_Ki" }
   ],
+  // ★ 今後3か月の依頼受付状況（Home と About に表示）。月が変わったら書き換えて updated も更新する。
+  //    status は "open"（○ 受付可能）/ "limited"（△ 要相談）/ "closed"（× 受付不可）。
+  //    表示をやめるときは availability: null にすればブロックごと消えます。
+  availability: {
+    updated: "2026.9.24",
+    months: [
+      { label: "10月", status: "limited" },
+      { label: "11月", status: "open" },
+      { label: "12月", status: "open" }
+    ]
+  },
   // ★ Contact ページ下部に出る、もう1つの窓口へのリンク。
   //    やめるときは extraLink: null にすれば、そのブロックごと消えます。
   extraLink: {
