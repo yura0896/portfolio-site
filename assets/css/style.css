@@ -234,7 +234,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .hero__name {
   font-size: clamp(36px, 8.5vw, 78px); line-height: 1.2; letter-spacing: .02em; margin: 0 0 16px; font-weight: 900;
-  color: #fff; text-shadow: 0 4px 0 #12344d, 3px 3px 0 #12344d, -3px 3px 0 #12344d;
+  color: #fff;
+}
+/* 名前は文字の外側をぐるっと縁取る（paint-order で線を塗りの下に回し、外側だけを見せる） */
+.hero__name > span {
+  display: inline-block; color: #fff;
+  -webkit-text-stroke: .16em var(--outline); paint-order: stroke fill; stroke-linejoin: round;
+  filter: drop-shadow(0 .07em 0 var(--outline));
 }
 .hero__name small {
   display: block; font-size: clamp(12px, 1.7vw, 15px); letter-spacing: .22em;
