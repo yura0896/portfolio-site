@@ -57,7 +57,7 @@ window.SITE = {
   //    表示をやめるときは credits: null にすればブロックごと消えます。
   credits: [
     { year: "2026", items: [
-      { title: "「メイドインアビス 目覚める神秘」", role: "第二原画" },
+      { title: "劇場版「メイドインアビス 目覚める神秘」", role: "第二原画" },
       { title: "TVアニメ「BEYBLADE X」#115", role: "第二原画" },
       { title: "TVアニメ「BEYBLADE X」#122", role: "第二原画" },
       { title: "TVアニメ「違国日記」#11", role: "第二原画" },
