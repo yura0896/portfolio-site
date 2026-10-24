@@ -115,6 +115,24 @@
         }).join("") + "</ul>";
     });
 
+    /* 料金表（SITE.prices） */
+    $$("[data-prices]").forEach(function (el) {
+      var p = SITE.prices;
+      if (!p || !p.items || !p.items.length) {
+        var box = el.closest("section") || el;
+        if (box.parentNode) box.parentNode.removeChild(box);
+        return;
+      }
+      el.innerHTML =
+        '<ul class="prices__list">' + p.items.map(function (it) {
+          return '<li class="prices__item"><span class="prices__name">' + esc(it.name) + "</span>" +
+            '<span class="prices__amount">' + esc(it.amount) + "<small> / " + esc(it.unit) + "</small></span></li>";
+        }).join("") + "</ul>" +
+        ((p.notes && p.notes.length) ? '<dl class="prices__notes">' + p.notes.map(function (n) {
+          return "<div><dt>" + esc(n.label) + "</dt><dd>" + esc(n.text) + "</dd></div>";
+        }).join("") + "</dl>" : "");
+    });
+
     /* 参加クレジット（SITE.credits）。未設定ならセクションごと消す */
     $$("[data-credits]").forEach(function (el) {
       var cr = SITE.credits;
