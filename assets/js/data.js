@@ -33,11 +33,10 @@ window.SITE = {
   email: "chibayuuki097@gmail.com",  // ← ★公開される連絡先。別アドレスにする場合はここを変更
   location: "Japan",                 // ← 本人の指示で国名のみ。都道府県は出さない
   available: true,                   // ← false にすると「現在受付停止中」表示
-  // ★ 他にアカウントがあれば行を足してください（pixiv / Instagram / YouTube など）。
+  // ★ SNS は現在どれも載せていない（X は本人の希望で外した）。載せるときは行を足す。
+  //    例：{ label: "X", url: "https://x.com/..." }
   //    リンク切れは印象が悪いので、運用していないものは載せないこと。
-  socials: [
-    { label: "X", url: "https://x.com/Yukishiro_Yu_Ki" }
-  ],
+  socials: [],
   // ★ 今後3か月の依頼受付状況（Home と About に表示）。月が変わったら書き換えて updated も更新する。
   //    status は "open"（○ 受付可能）/ "limited"（△ 要相談）/ "closed"（× 受付不可）。
   //    表示をやめるときは availability: null にすればブロックごと消えます。
