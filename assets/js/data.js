@@ -76,11 +76,11 @@ window.SITE = {
   //    status は "open"（○ 受付可能）/ "limited"（△ 要相談）/ "closed"（× 受付不可）。
   //    表示をやめるときは availability: null にすればブロックごと消えます。
   availability: {
-    updated: "2026.9.24",
+    updated: "2026.10.24",
     months: [
-      { label: "10月", status: "limited" },
-      { label: "11月", status: "open" },
-      { label: "12月", status: "open" }
+      { label: "11月", status: "limited" },
+      { label: "12月", status: "open" },
+      { label: "1月", status: "open" }
     ]
   },
   // ★ Contact ページ下部に出る、もう1つの窓口へのリンク。
