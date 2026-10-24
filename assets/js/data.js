@@ -37,6 +37,26 @@ window.SITE = {
   //    例：{ label: "X", url: "https://x.com/..." }
   //    リンク切れは印象が悪いので、運用していないものは載せないこと。
   socials: [],
+  // ★ Works ページ下部の「参加クレジット」（文字だけ）。新しい年ほど上に置く。
+  //    role は対応できる工程だけ書く（動画・仕上げなどは書かず「参加」にする。CLAUDE.md 5章）。
+  //    表示をやめるときは credits: null にすればブロックごと消えます。
+  credits: [
+    { year: "2026", items: [
+      { title: "TVアニメ「BEYBLADE X」#115", role: "第二原画" },
+      { title: "TVアニメ「BEYBLADE X」#122", role: "第二原画" },
+      { title: "TVアニメ「違国日記」#11", role: "第二原画" },
+      { title: "アニメーションPV「IZIGENIA DEBUT ANIMATION」", role: "第二原画" },
+      { title: "TVアニメ「異世界のんびり農家２」#9", role: "第二原画" },
+      { title: "TVアニメ「夜桜さんちの大作戦 第2期」#38", role: "第二原画" },
+      { title: "TVアニメ「無職転生III ～異世界行ったら本気だす～」#2", role: "第二原画" },
+      { title: "TVアニメ「ぐらんぶる Season 3」ED", role: "第二原画" },
+      { title: "TVアニメ「炎の闘球女 ドッジ弾子」#8", role: "第二原画" }
+    ] },
+    { year: "2025", items: [
+      { title: "スタジオDOT「轍を越えてゆけ」", role: "参加" },
+      { title: "TVアニメ「嘆きの亡霊は引退したい」#24", role: "第二原画" }
+    ] }
+  ],
   // ★ 今後3か月の依頼受付状況（Home と About に表示）。月が変わったら書き換えて updated も更新する。
   //    status は "open"（○ 受付可能）/ "limited"（△ 要相談）/ "closed"（× 受付不可）。
   //    表示をやめるときは availability: null にすればブロックごと消えます。

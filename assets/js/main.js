@@ -115,6 +115,21 @@
         }).join("") + "</ul>";
     });
 
+    /* 参加クレジット（SITE.credits）。未設定ならセクションごと消す */
+    $$("[data-credits]").forEach(function (el) {
+      var cr = SITE.credits;
+      if (!cr || !cr.length) {
+        var box = el.closest("section") || el;
+        if (box.parentNode) box.parentNode.removeChild(box);
+        return;
+      }
+      el.innerHTML = cr.map(function (g) {
+        return '<div class="credits__year"><h3>' + esc(g.year) + "</h3><ul>" + g.items.map(function (it) {
+          return "<li><span class=\"credits__title\">" + esc(it.title) + '</span><span class="credits__role">' + esc(it.role) + "</span></li>";
+        }).join("") + "</ul></div>";
+      }).join("");
+    });
+
     $$("[data-year]").forEach(function (el) { el.textContent = String(new Date().getFullYear()); });
 
     $$("[data-available]").forEach(function (el) {

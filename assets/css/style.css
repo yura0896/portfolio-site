@@ -342,6 +342,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .empty { color: var(--fg-muted); padding: 40px 0; }
 
+/* ---------- 参加クレジット（文字だけの一覧） ---------- */
+.credits { display: grid; gap: 28px; max-width: 760px; }
+.credits__year h3 {
+  display: inline-block; font-size: 14px; letter-spacing: .12em; margin: 0 0 8px;
+  padding: 3px 16px; border-radius: var(--radius-pill); background: var(--pink); color: var(--pink-fg);
+}
+.credits__year li {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px;
+  padding: 11px 0; border-bottom: 2px dotted var(--border); font-size: 14.5px;
+}
+.credits__title { font-weight: 500; }
+.credits__role { color: var(--fg-muted); font-size: 13px; white-space: nowrap; }
+
 /* ---------- 7. 作品詳細 ---------- */
 .detail__head { padding-block: clamp(32px, 6vw, 60px) 28px; }
 .back {
