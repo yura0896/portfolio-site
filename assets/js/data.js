@@ -106,6 +106,23 @@ window.SITE = {
 
 window.WORKS = [
   {
+    id: "2026-roar-mv",
+    title: "初星学園「Roar」Official Music Video",
+    category: "animation",
+    year: 2026,
+    role: "第二原画・動画",
+    client: "",
+    tags: ["MV"],
+    thumb: "assets/img/2026-roar-mv.jpg",
+    loop: "",
+    embed: { type: "youtube", id: "Mdyk3h5-TQE" },
+    images: [],
+    summary: "",
+    body: [],
+    featured: false,
+    credit: "THE IDOLM@STER™ & ©Bandai Namco Entertainment Inc."
+  },
+  {
     id: "2026-tokyomanaka-mv",
     title: "東京真中 - フォーモ feat. 重音テト",
     category: "animation",

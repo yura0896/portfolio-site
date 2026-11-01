@@ -314,7 +314,7 @@
           '<dl class="spec">' +
             "<div><dt>制作年</dt><dd>" + esc(w.year) + "</dd></div>" +
             "<div><dt>担当</dt><dd>" + esc(w.role) + "</dd></div>" +
-            "<div><dt>クライアント</dt><dd>" + esc(w.client) + "</dd></div>" +
+            (w.client ? "<div><dt>クライアント</dt><dd>" + esc(w.client) + "</dd></div>" : "") +
             "<div><dt>区分</dt><dd>" + esc(CATEGORY_LABEL[w.category] || w.category) + "</dd></div>" +
           "</dl>" +
         "</div>" +
