@@ -106,6 +106,23 @@ window.SITE = {
 
 window.WORKS = [
   {
+    id: "2026-super-tokimeki-heroine",
+    title: "『スーパーときめきヒロイン』橘ひなの",
+    category: "animation",
+    year: 2026,
+    role: "アニメーション協力",
+    client: "",
+    tags: ["MV"],
+    thumb: "assets/img/2026-super-tokimeki-heroine.jpg",
+    loop: "",
+    embed: { type: "youtube", id: "brhQkxxZbxM" },
+    images: [],
+    summary: "",
+    body: [],
+    featured: true,
+    credit: ""
+  },
+  {
     id: "2026-roar-mv",
     title: "初星学園「Roar」Official Music Video",
     category: "animation",
