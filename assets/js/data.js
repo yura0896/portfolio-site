@@ -119,7 +119,7 @@ window.WORKS = [
     images: [],
     summary: "",
     body: [],
-    featured: false,
+    featured: true,
     credit: "THE IDOLM@STER™ & ©Bandai Namco Entertainment Inc."
   },
   {
